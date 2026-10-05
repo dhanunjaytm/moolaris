@@ -1,0 +1,147 @@
+/* About-page additions; all selectors are scoped to .about-page. */
+.about-page .about h1{font-size:clamp(36px,4.4vw,54px);line-height:1.1;letter-spacing:-2.8px;font-weight:600;margin:0}
+.about-page .about h1 em{font-family:Georgia,serif;font-weight:400;color:#728957;letter-spacing:-2px}
+.about-page .about-founder{background:#E7EBE3}
+.about-page .about-purpose{background:#F5F3ED}
+.about-page .about-ecosystem{background:#E7EBE3}
+.about-page .about-beliefs{background:#F5F3ED}
+.about-page .about-focus{background:#E7EBE3}
+.about-page .about-audience{background:#F5F3ED}
+.about-page .about-section-heading{display:grid;grid-template-columns:1.1fr .9fr;gap:8%;align-items:end;margin:31px 0}
+.about-page .about-section-heading h2{font-size:clamp(36px,4.2vw,52px);line-height:1.1;letter-spacing:-2.5px;font-weight:600;margin:0}
+.about-page .about-section-heading h2 em{font:italic 1em Georgia,serif;color:#728957;letter-spacing:-1.5px}
+.about-page .about-section-heading>p{font-size:13px;line-height:1.8;color:#68736D;margin:0 0 4px;max-width:420px}
+.about-page .about-small-label{font:9px var(--mono);letter-spacing:.8px;color:#728957}
+.about-page .founder-panel{display:grid;grid-template-columns:.9fr 1.1fr;gap:9%;align-items:center;background:#FFFFFF;padding:32px;margin-top:28px;border-left:3px solid #C6D3A8}
+.about-page .founder-panel h2{font-size:clamp(29px,3vw,39px);line-height:1.14;letter-spacing:-1.7px;margin:15px 0 0}
+.about-page .founder-placeholder{font-size:14px;line-height:1.85;color:#293630;background:#F0F2EA;border:1px dashed #C6D3A8;padding:17px 19px;margin:0}
+.about-page .founder-note{font-size:11px;line-height:1.7;color:#68736D;margin:12px 0 0}
+.about-page .purpose-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:29px}
+.about-page .purpose-card{background:#FFFFFF;padding:24px 25px;border-top:2px solid #C6D3A8}
+.about-page .purpose-mission{background:#293630;color:#FFFFFF;border-top-color:#E7EBE3}
+.about-page .purpose-card .about-small-label{display:block;margin-bottom:15px}
+.about-page .purpose-mission .about-small-label{color:#E7EBE3}
+.about-page .purpose-card h2{font-size:21px;line-height:1.55;letter-spacing:-.35px;font-weight:600;margin:0}
+.about-page .draft-note{font-size:10px;color:#68736D;margin:12px 0 0}
+.about-page .about-vertical-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:28px 0 18px}
+.about-page .about-vertical{background:#FFFFFF;padding:22px 24px;border-top:2px solid #C6D3A8}
+.about-page .about-vertical-primary{background:#293630;color:#FFFFFF;border-top-color:#E7EBE3;box-shadow:0 10px 22px #29363016}
+.about-page .about-vertical h3{font-size:20px;line-height:1.35;letter-spacing:-.5px;margin:15px 0 8px}
+.about-page .about-vertical p{font-size:12px;line-height:1.8;color:#68736D;margin:0 0 15px}
+.about-page .about-vertical-primary p{color:#DCE3DC}
+.about-page .about-vertical>a{display:inline-flex;align-items:center;gap:12px;padding:9px 11px;background:#E7EBE3;color:#34423A;font-size:10px;font-weight:700;margin:4px 7px 0 0}
+.about-page .about-vertical-primary>a{background:#E7EBE3;color:#293630}
+.about-page .about-vertical .about-secondary-link{background:transparent;color:#536A47;border:1px solid #DCE3DC}
+.about-page .about-vertical-primary .about-secondary-link{color:#FFFFFF;border-color:#68736D}
+.about-page .about-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;align-items:start}
+.about-page .about-path{background:#FFFFFF;border:1px solid #DCE3DC;min-height:100%}
+.about-page .about-path[open]{border-color:#C6D3A8;box-shadow:0 8px 20px #2936300e}
+.about-page .about-path summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:15px 16px;min-height:62px}
+.about-page .about-path summary::-webkit-details-marker{display:none}
+.about-page .path-number{font:8px var(--mono);color:#728957;background:#E7EBE3;border-radius:50%;width:25px;height:25px;display:grid;place-items:center;flex:0 0 auto}
+.about-page .path-title{font-size:16px;font-weight:700}
+.about-page .path-expand{margin-left:auto;color:#728957;font-size:17px;transition:transform .2s}
+.about-page .about-path[open] .path-expand{transform:rotate(45deg)}
+.about-page .about-path summary:focus-visible{outline:3px solid #728957;outline-offset:2px}
+.about-page .about-path-content{padding:0 16px 17px}
+.about-page .about-path-flow{font-size:11px;line-height:1.8;font-weight:700;color:#293630;margin:0 0 10px}
+.about-page .about-path-flow b{color:#728957;padding:0 2px}
+.about-page .about-path-content>p:last-child{font-size:11px;line-height:1.75;color:#68736D;margin:0}
+.about-page .belief-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:29px}
+.about-page .belief-grid article{background:#FFFFFF;border:1px solid #DCE3DC;padding:21px;min-height:180px}
+.about-page .belief-grid article>span{font:9px var(--mono);color:#728957}
+.about-page .belief-grid h3{font-size:16px;line-height:1.45;margin:22px 0 8px}
+.about-page .belief-grid p{font-size:11px;line-height:1.75;color:#68736D;margin:0}
+.about-page .focus-panel{display:grid;grid-template-columns:.85fr 1.15fr;gap:9%;align-items:center;background:#293630;color:#FFFFFF;padding:30px;margin-top:28px}
+.about-page .focus-panel .about-small-label{color:#E7EBE3}
+.about-page .focus-panel h2{font-size:clamp(34px,4vw,48px);line-height:1.1;letter-spacing:-2px;margin:15px 0 0}
+.about-page .focus-panel h2 em{font:italic 1em Georgia,serif;color:#E7EBE3}
+.about-page .focus-panel>div+div>p{font-size:13px;line-height:1.8;color:#D3DAD1;margin:0 0 13px}
+.about-page .focus-placeholder{border:1px dashed #738175;padding:15px 16px;color:#CBD3C9!important;font-size:11px!important}
+.about-page .about-audience{background:#E7EBE3}
+.about-page .about-audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-top:27px}
+.about-page .about-audience-grid article{display:flex;flex-direction:column;align-items:flex-start;background:#FFFFFF;border:1px solid #DCE3DC;padding:18px;min-height:190px}
+.about-page .about-audience-grid article>span{font:8px var(--mono);letter-spacing:.6px;color:#728957}
+.about-page .about-audience-grid h3{font-size:15px;line-height:1.45;margin:16px 0 16px}
+.about-page .about-audience-grid a{font-size:10px;line-height:1.5;font-weight:700;color:#34423A;margin-top:auto;padding:6px 0}
+.about-page .about-audience-grid a b{color:#728957;margin-left:4px}
+.about-page .about-audience-grid a.about-secondary-link{font-weight:500;margin-top:7px;color:#536A47;border-bottom:1px solid #DCE3DC}
+.about-page a[href$=".html"]{transition:background-color .18s,color .18s,box-shadow .18s,transform .18s}
+.about-page a[href$=".html"]:hover,.about-page a[href$=".html"]:focus-visible{background:#E7EBE3;color:#293630;text-decoration:none;box-shadow:0 4px 12px #29363016;transform:translateY(-2px)}
+.about-page a[href$=".html"]:focus-visible{outline:3px solid #728957;outline-offset:3px}
+@media(max-width:950px){.about-page .about-audience-grid{grid-template-columns:repeat(2,1fr)}.about-page .about-paths{grid-template-columns:1fr}.about-page .about-path-content{padding-bottom:16px}}
+@media(max-width:760px){.about-page .about h1{font-size:42px}.about-page .about-section-heading{grid-template-columns:1fr;gap:12px;margin:24px 0}.about-page .about-section-heading h2{font-size:37px}.about-page .founder-panel,.about-page .focus-panel{grid-template-columns:1fr;gap:20px;padding:22px}.about-page .purpose-grid,.about-page .about-vertical-grid{grid-template-columns:1fr}.about-page .purpose-card h2{font-size:19px}.about-page .about-path summary{min-height:58px}.about-page .belief-grid{grid-template-columns:1fr}.about-page .belief-grid article{min-height:0}.about-page .belief-grid h3{margin:14px 0 7px}.about-page .about-audience-grid{grid-template-columns:1fr}.about-page .about-audience-grid article{min-height:0}.about-page .about-audience-grid h3{margin:13px 0}.about-page .about-hero .about-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.about-page .path-expand,.about-page a[href$=".html"]{transition:none!important}}
+.about-page .story-intro{display:grid;grid-template-columns:.78fr 1.22fr;gap:15px;margin-top:28px;align-items:stretch}
+.about-page .story-name{min-height:230px;background:#293630;color:#FFFFFF;padding:26px;display:flex;flex-direction:column;justify-content:center}
+.about-page .story-name .about-small-label{color:#E7EBE3}
+.about-page .name-lockup{display:flex;align-items:center;gap:10px;margin-top:23px;font-size:clamp(26px,3vw,38px);font-weight:700;letter-spacing:-1.5px}
+.about-page .name-lockup span:last-child{font-family:Georgia,serif;font-style:italic;font-weight:400;color:#E7EBE3}
+.about-page .name-lockup>b{font-size:19px;font-weight:400;color:#C6D3A8}
+.about-page .story-name>p{font:8px var(--mono);letter-spacing:1.1px;color:#DCE3DC;margin:13px 0 0}
+.about-page .story-name>p i{font-style:normal;color:#E7EBE3;padding:0 5px}
+.about-page .story-copy{background:#FFFFFF;padding:28px 30px;display:flex;flex-direction:column;justify-content:center;border-left:2px solid #C6D3A8}
+.about-page .story-copy h2{font-size:clamp(27px,3vw,37px);line-height:1.2;letter-spacing:-1.5px;margin:0 0 12px}
+.about-page .story-copy h2 em{font:italic 1em Georgia,serif;color:#728957}
+.about-page .story-copy p{font-size:13px;line-height:1.85;color:#68736D;margin:0}
+.about-page .story-copy strong{color:#293630}
+.about-page .story-method{display:grid;grid-template-columns:.8fr 1.2fr;gap:7%;align-items:center;background:#F5F3ED;padding:27px 29px;margin-top:14px}
+.about-page .story-method-heading h3,.about-page .story-bridge h3{font-size:25px;line-height:1.35;letter-spacing:-.5px;margin:13px 0 8px}
+.about-page .story-method-heading>p,.about-page .story-bridge p{font-size:13px;line-height:1.8;color:#68736D;margin:0}
+.about-page .method-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.about-page .method-steps li{min-height:156px;background:#FFFFFF;border:1px solid #DCE3DC;padding:14px 13px;display:flex;flex-direction:column;align-items:flex-start}
+.about-page .method-steps li>span{font:10px var(--mono);color:#728957}
+.about-page .method-steps b{font-size:12px;line-height:1.5;margin:12px 0 7px}
+.about-page .method-steps small{font-size:11px;line-height:1.6;color:#68736D}
+.about-page .story-bridge{display:grid;grid-template-columns:.8fr 1.2fr;gap:7%;align-items:center;background:#E7EBE3;padding:25px 29px;margin-top:14px;border-left:3px solid #C6D3A8}
+.about-page .story-bridge>div+div{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:950px){.about-page .story-method{grid-template-columns:1fr;gap:19px}.about-page .method-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.about-page .story-intro,.about-page .story-bridge{grid-template-columns:1fr;gap:10px}.about-page .story-name{min-height:170px;padding:22px}.about-page .story-copy{padding:23px}.about-page .story-bridge>div+div{grid-template-columns:1fr;gap:12px}.about-page .story-method{padding:22px}.about-page .story-method-heading h3,.about-page .story-bridge h3{font-size:22px}.about-page .method-steps li{min-height:136px}.about-page .method-steps b{font-size:12px}.about-page .method-steps small{font-size:10px}}
+
+/* About page readability pass: enlarge section labels and supporting copy while preserving the shared site chrome. */
+.about-page .section-kicker{font-size:11px;gap:15px;line-height:1.5}
+.about-page .about-small-label{font-size:11px;letter-spacing:.9px;line-height:1.5}
+.about-page .about-section-heading>p,
+.about-page .founder-placeholder,
+.about-page .about-vertical p,
+.about-page .story-copy p,
+.about-page .story-method-heading>p,
+.about-page .story-bridge p,
+.about-page .about-path-content>p:last-child,
+.about-page .belief-grid p,
+.about-page .focus-panel>div+div>p{font-size:14px;line-height:1.8}
+.about-page .founder-note,
+.about-page .draft-note,
+.about-page .method-steps small,
+.about-page .about-path-flow{font-size:12px;line-height:1.7}
+.about-page .method-steps b{font-size:13px;line-height:1.5}
+.about-page .method-steps li>span,
+.about-page .belief-grid article>span,
+.about-page .about-audience-grid article>span{font-size:10px}
+.about-page .about-vertical>a,
+.about-page .about-audience-grid a{font-size:12px;line-height:1.55}
+.about-page .about-audience-grid h3{font-size:17px;line-height:1.5}
+.about-page .purpose-card h2{font-size:23px;line-height:1.5}
+.about-page .about-vertical h3{font-size:22px}
+.about-page .belief-grid h3{font-size:18px}
+.about-page .path-number{font-size:10px}
+@media(max-width:760px){
+ .about-page .section-kicker{font-size:10px;gap:9px;line-height:1.55}
+ .about-page .about-small-label{font-size:10px}
+ .about-page .about-section-heading>p,
+ .about-page .founder-placeholder,
+ .about-page .about-vertical p,
+ .about-page .story-copy p,
+ .about-page .story-method-heading>p,
+ .about-page .story-bridge p,
+ .about-page .about-path-content>p:last-child,
+ .about-page .belief-grid p,
+ .about-page .focus-panel>div+div>p{font-size:13px}
+ .about-page .method-steps small,.about-page .about-path-flow{font-size:11px}
+ .about-page .purpose-card h2{font-size:20px}
+ .about-page .about-vertical>a,.about-page .about-audience-grid a{font-size:12px}
+}
+
+/* Tighten the oversized gap at the top of the About page. */
+.about-page > #about{padding-top:42px}
+@media(max-width:760px){.about-page > #about{padding-top:30px}}

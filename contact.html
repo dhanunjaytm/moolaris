@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f5">
+  <meta name="description" content="Contact Moolaris by email or WhatsApp to enquire about training, college workshops, project support, internships, or company training."><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:site_name" content="Moolaris Technologies"><meta property="og:title" content="Contact Moolaris Technologies"><meta property="og:description" content="Contact Moolaris by email or WhatsApp to enquire about training, college workshops, project support, internships, or company training."><meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+  <title>Contact Moolaris Technologies</title>
+</head>
+<body><a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Moolaris home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>moolaris<span class="brand-light"> technologies</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" aria-label="Main navigation"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="about.html">About Moolaris</a><a class="nav-link" href="training.html">Training</a><a class="nav-link" href="solutions.html">Solutions</a><a class="nav-link" href="research.html">R&amp;D</a><a class="nav-link" href="products.html">Products</a><a class="nav-link" href="projects.html">Projects</a><a class="nav-cta" href="contact.html">Let’s talk <span>↗</span></a></nav>
+  </header>
+  <main class="contact-page" id="main-content">
+    <section class="contact section-pad" id="contact">
+      <div class="contact-inner">
+        <div class="contact-intro">
+          <div class="section-kicker"><span>CONTACT MOOLARIS</span><span class="kicker-rule"></span></div>
+          <h1>Have an idea,<br>requirement or <em>question?</em></h1>
+          <p>Tell us whether you’re a student, college, company, or potential collaborator, and briefly describe what you’d like to discuss.</p>
+          <div class="contact-next-step"><span class="contact-note-label">WHAT HAPPENS NEXT</span><p>Choose email or WhatsApp to open a draft, then review and send it in that app. Nothing is sent automatically from this website.</p></div>
+        </div>
+        <form id="contact-preparation-form">
+          <label>Your name<input name="name" autocomplete="name" placeholder="How should we call you?" required></label>
+          <label>Email address<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+          <label for="audience">I’m reaching out as
+            <select id="audience" name="audience" required>
+              <option value="" selected disabled>Choose one</option>
+              <option value="Company">Company</option>
+              <option value="College">College</option>
+              <option value="Student">Student</option>
+              <option value="Potential Collaborator">Potential Collaborator</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label for="message" id="message-label">What would you like to discuss?
+            <textarea id="message" name="message" rows="4" placeholder="Choose your enquiry type first…" required></textarea>
+          </label>
+          <div class="contact-direct-channels" aria-label="Direct contact options">
+            <span class="contact-note-label">CHOOSE HOW TO SEND YOUR ENQUIRY</span>
+            <div class="contact-channel-actions">
+              <button class="button button-dark" id="send-email-button" type="button">Send via email <span aria-hidden="true">↗</span></button>
+              <button class="button button-channel-secondary" id="send-whatsapp-button" type="button">Send via WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+            <small><a href="mailto:dhanunjaytmoffical@gmail.com">dhanunjaytmoffical@gmail.com</a> · <a href="https://wa.me/916303363670" target="_blank" rel="noopener noreferrer">+91 6303363670</a></small>
+          </div>
+          <p class="form-note">Each option opens a message draft in that app. Review it and press Send there; this website does not send it automatically.</p>
+          <div class="contact-privacy-note"><p>This website does not submit or store your details. If you open an email or WhatsApp draft, that service handles the message; review it and choose whether to send.</p><p>Please don’t include confidential designs, passwords, or sensitive technical information in your first message.</p></div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <section class="closing"><span class="closing-mark">✳</span><p>Learn something. Build something. Move an idea forward.</p><a href="index.html">BACK TO HOME ↑</a></section>
+  <footer><a class="brand" href="index.html" aria-label="Moolaris home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>moolaris<span class="brand-light"> technologies</span></span></a><span>SKILLS · ENGINEERING · INNOVATION</span><span>© <span id="year"></span> MOOLARIS</span></footer>
+  <script src="script.js"></script>
+  <script>
+    (() => {
+    const contactForm = document.querySelector('#contact-preparation-form');
+    const audienceSelect = document.querySelector('#audience');
+    const messageField = document.querySelector('#message');
+    const messageLabel = document.querySelector('#message-label');
+    const formStatus = document.querySelector('#form-status');
+    const businessEmail = 'dhanunjaytmoffical@gmail.com';
+    const whatsappNumber = '916303363670';
+    const getEnquiryMessage = () => {
+      if (!contactForm.reportValidity()) return null;
+      const data = new FormData(contactForm);
+      const message = [
+        'Hello Moolaris,',
+        '',
+        `My name is ${data.get('name')}.`,
+        `I am reaching out as a ${data.get('audience')}.`,
+        `You can reply to me at ${data.get('email')}.`,
+        '',
+        `${data.get('message')}`
+      ].join('\n');
+      return { message, audience: data.get('audience') };
+    };
+    const sendByEmail = () => {
+      const enquiry = getEnquiryMessage();
+      if (!enquiry) return;
+      const subject = encodeURIComponent(`Moolaris ${enquiry.audience} enquiry`);
+      window.location.href = `mailto:${businessEmail}?subject=${subject}&body=${encodeURIComponent(enquiry.message)}`;
+      formStatus.textContent = 'Your email app should open with the enquiry draft. Review it and press Send in that app.';
+    };
+    const sendByWhatsApp = () => {
+      const enquiry = getEnquiryMessage();
+      if (!enquiry) return;
+      const whatsappWindow = window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(enquiry.message)}`, '_blank', 'noopener,noreferrer');
+      if (whatsappWindow) whatsappWindow.opener = null;
+      formStatus.textContent = 'WhatsApp should open with the enquiry draft. Review it and press Send there.';
+    };
+
+    document.querySelector('#send-email-button').addEventListener('click', sendByEmail);
+    document.querySelector('#send-whatsapp-button').addEventListener('click', sendByWhatsApp);
+    const promptByAudience = {
+      Company: 'What training topic, team skill, or schedule would you like to discuss?',
+      College: 'What college workshop, final-year project support, prototype exploration, or internship opportunity would you like to discuss?',
+      Student: 'What training, final-year project or prototype support, or internship opportunity are you asking about?',
+      'Potential Collaborator': 'Tell us briefly about the collaboration you have in mind.',
+      Other: 'What would you like to discuss?'
+    };
+
+    audienceSelect.addEventListener('change', () => {
+      const prompt = promptByAudience[audienceSelect.value] || 'What would you like to discuss?';
+      messageLabel.firstChild.textContent = `${prompt} `;
+      messageField.placeholder = prompt;
+      formStatus.textContent = '';
+    });
+
+    contactForm.addEventListener('submit', event => {
+      event.preventDefault();
+    });
+    })();
+  </script>
+</body>
+</html>

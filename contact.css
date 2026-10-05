@@ -1,0 +1,72 @@
+/* Contact-page-only refinements for direct enquiries and privacy. */
+.contact-page .contact h1{font-size:43px;line-height:1.1;letter-spacing:-2.8px;font-weight:600;margin:26px 0 12px}
+.contact-page .contact h1 em{font-family:Georgia,serif;font-weight:400;color:#728957;letter-spacing:-2px}
+.contact-page .contact-privacy-note,.contact-page .contact-direct-channels,.contact-page .form-note,.contact-page .form-status{grid-column:1/-1}
+.contact-page .contact-privacy-note{padding:11px 12px;background:#F1F3EC;border-left:2px solid #C6D3A8}
+.contact-page .contact-privacy-note p{font-size:10px;line-height:1.65;color:#68736D;margin:0}
+.contact-page .contact-privacy-note p+p{margin-top:7px}
+.contact-page .form-note{font-size:9px;line-height:1.6}
+.contact-page .contact-next-step{margin-top:24px;padding:15px 16px;background:#E7EBE3;border-left:2px solid #C6D3A8;max-width:470px}
+.contact-page .contact-note-label{font:9px var(--mono);letter-spacing:.6px;color:#728957}
+.contact-page .contact-next-step p{font-size:12px;line-height:1.75;color:#68736D;margin:8px 0 0}
+.contact-page .contact-direct-channels{margin-top:1px;padding:13px 0 2px;border-top:1px solid #DCE3DC}
+.contact-page .contact-channel-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+.contact-page .contact-channel-actions .button{font-size:11px;gap:12px;padding:11px 13px}
+.contact-page .button-channel-secondary{background:#E7EBE3;color:#293630;border:1px solid #C6D3A8}
+.contact-page .button-channel-secondary:hover,.contact-page .button-channel-secondary:focus-visible{background:#D5E0C0;box-shadow:0 5px 13px #29363012}
+.contact-page .contact-direct-channels small{display:block;margin-top:9px;color:#68736D;font-size:10px;line-height:1.6;overflow-wrap:anywhere}
+.contact-page .contact-direct-channels small a{color:#293630;text-decoration:underline;text-decoration-color:#AAB99E;text-underline-offset:3px}
+.contact-page .contact-direct-channels small a:hover,.contact-page .contact-direct-channels small a:focus-visible{color:#536A47;text-decoration-thickness:2px}
+.contact-page .contact-direct-channels small a:focus-visible{outline:2px solid #728957;outline-offset:3px}
+.contact-page .form-status{font-size:11px;line-height:1.65;color:#536A47}
+@media(max-width:760px){.contact-page .contact-next-step{margin-top:18px}.contact-page .contact-privacy-note p{font-size:10px}}
+
+/* Contact-page readability pass. */
+.contact-page .section-kicker{font-size:12px;line-height:1.55;gap:15px}
+.contact-page .contact-intro>p{font-size:14px;line-height:1.85}
+.contact-page #contact-preparation-form label{font-size:10px;line-height:1.6}
+.contact-page #contact-preparation-form input,.contact-page #contact-preparation-form select,.contact-page #contact-preparation-form textarea{font-size:14px;line-height:1.6}
+.contact-page .contact-note-label{font-size:10px}
+.contact-page .contact-next-step p{font-size:14px;line-height:1.75}
+.contact-page .form-note{font-size:11px;line-height:1.65}
+.contact-page .contact-privacy-note p{font-size:12px;line-height:1.7}
+.contact-page .contact-channel-actions .button{font-size:13px}
+.contact-page .form-status{font-size:12px;line-height:1.7}
+@media(max-width:760px){
+ .contact-page .section-kicker{font-size:11px;gap:9px}
+ .contact-page .contact h1{font-size:39px}
+ .contact-page .contact-intro>p,.contact-page .contact-next-step p{font-size:13px}
+ .contact-page .contact-channel-actions .button{font-size:12px}
+ .contact-page #contact-preparation-form label{font-size:10px}
+ .contact-page #contact-preparation-form input,.contact-page #contact-preparation-form select,.contact-page #contact-preparation-form textarea{font-size:16px}
+ .contact-page .contact-privacy-note p{font-size:12px}
+}
+
+/* Keep the enquiry form readable and aligned across phone, tablet and desktop widths. */
+@media(min-width:761px){
+ .contact-page #contact-preparation-form{align-content:start;gap:16px}
+ .contact-page #contact-preparation-form label{font-size:12px}
+ .contact-page #contact-preparation-form input,.contact-page #contact-preparation-form select,.contact-page #contact-preparation-form textarea{font-size:15px}
+ .contact-page #contact-preparation-form>label{min-width:0}
+ .contact-page #contact-preparation-form input,.contact-page #contact-preparation-form select,.contact-page #contact-preparation-form textarea{width:100%;min-width:0}
+ .contact-page .contact-channel-actions{align-items:stretch}
+ .contact-page .contact-channel-actions .button{min-height:46px}
+}
+@media(max-width:760px){
+ .contact-page .contact-inner{grid-template-columns:minmax(0,1fr);gap:22px}
+ .contact-page #contact-preparation-form{grid-template-columns:minmax(0,1fr);gap:14px;padding:clamp(16px,4vw,22px)}
+ .contact-page #contact-preparation-form>label,.contact-page #contact-preparation-form>.contact-direct-channels,.contact-page #contact-preparation-form>.form-note,.contact-page #contact-preparation-form>.contact-privacy-note,.contact-page #contact-preparation-form>.form-status{grid-column:1;min-width:0}
+ .contact-page #contact-preparation-form label{font-size:12px;line-height:1.55}
+ .contact-page #contact-preparation-form input,.contact-page #contact-preparation-form select,.contact-page #contact-preparation-form textarea{display:block;width:100%;min-width:0;font-size:16px;line-height:1.5}
+ .contact-page #contact-preparation-form textarea{min-height:150px}
+ .contact-page .contact-channel-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+ .contact-page .contact-channel-actions .button{width:100%;min-height:48px;justify-content:space-between;padding:13px 15px;font-size:13px}
+ .contact-page .contact-direct-channels small{font-size:11px}
+ .contact-page .contact-privacy-note{padding:13px 14px}
+ .contact-page .form-note{font-size:12px}
+}
+@media(max-width:390px){
+ .contact-page .contact h1{font-size:clamp(34px,10vw,39px);letter-spacing:-1.6px}
+ .contact-page .section-kicker{gap:7px}
+ .contact-page .contact-direct-channels{padding-top:11px}
+}
